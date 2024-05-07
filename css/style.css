@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Press+Start+2P&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* HEADER */
+.header {
+    width: 100%;
+    font-family: "Press Start 2P", system-ui;
+    height: 96px;
+    background-color: #5D04D9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header__content {
+    display: flex;
+    align-items: center;
+    color: #E5E5E5;
+}
+
+.header__content img {
+    width: 100px;
+}
+
+/* MAIN */
+.main {
+    /* margin-top: 50px; */
+    padding: 10px;
+    display: flex;
+    gap: 20px;
+    flex: 1;
+}
+
+/* Productos */
+.products {
+    flex: 2;
+
+}
+
+.products-title {
+    font-family: "Press Start 2P", system-ui;
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+.products-container {
+
+    height: 60vh;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(144px, 196px));
+    gap: 10px;
+    padding: 10px;
+    overflow-y: auto;
+}
+
+/* Estilo para la barra de scroll */
+.products-container::-webkit-scrollbar {
+    width: 3px;
+
+    /* Ancho de la barra de scroll */
+}
+
+.products-container::-webkit-scrollbar-thumb {
+    background: #D6D6D6;
+    border-radius: 5px;
+    /* Color del thumb */
+}
+
+.products-card {
+    background-color: #5D04D9;
+    height: 260px;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: #fff;
+    font-family: "IBM Plex Mono", monospace;
+
+}
+
+
+.products-card-img {
+    width: 100%;
+    /* Permite que la imagen mantenga su relación de aspecto */
+    height: 180px;
+}
+
+.products-card-value {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.products-btn {
+    outline: none;
+    background: none;
+    border: none;
+}
+
+/* Agregar productos */
+.info {
+    flex: 1;
+}
+
+.info-title {
+    font-family: "Press Start 2P", system-ui;
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+.info-form {
+    /* width: 392px; */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    gap: 10px;
+
+
+}
+
+.caja {
+    width: 100%;
+}
+
+.info-form-input {
+    width: 100%;
+    padding: 5px;
+    border-radius: 10px;
+    outline: none;
+    border: 2px solid #03318C;
+    color: #03318C;
+    font-family: "IBM Plex Mono", monospace;
+}
+
+.info-form-input::placeholder {
+    color: #03318C;
+    font-family: "IBM Plex Mono", monospace;
+}
+
+.info-form-action {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.info-form-btn {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    outline: none;
+    font-family: "IBM Plex Mono", monospace;
+}
+
+.btn1 {
+    background-color: #03318C;
+    color: #fff;
+    border: none;
+}
+
+.btn2 {
+    border: 2px solid #03318C;
+    color: #03318C;
+}
+
+/* Footer */
+.footer {
+    background-color: #5D04D9;
+    text-align: center;
+    width: 100%;
+    position: relative;
+    /* Cambiado a relativa */
+    bottom: 0;
+    /* Lo fija en la parte inferior */
+}
+
+.footer-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-info img {
+    width: 100px;
+}
+
+.footer-info h3 {
+    font-family: "Press Start 2P", system-ui;
+    color: #E5E5E5;
+}
+
+.footer-p1 {
+    font-size: 16px;
+}
+
+.footer-p2 {
+    font-size: 16px;
+}
+
+.font {
+    color: #E5E5E5;
+    font-family: "IBM Plex Mono", monospace;
+}
+
+
+/* para movil */
+@media only screen and (max-width: 750px) {
+    .main {
+        flex-direction: column;
+    }
+
+    .info {
+        order: 1;
+    }
+
+    .products {
+        order: 2;
+    }
+
+    /* Agregar productos  */
+    .info-form {
+        width: 100%;
+    }
+
+    .products-container {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 170px));
+
+    }
+
+    .products-card {
+        width: 170px;
+    }
+}
+
+/* Errores */
+.mensaje-conexion {
+
+    color: red;
+
+}
+
+.advertencia {
+    display: block;
+    margin-top: 5px;
+    font-weight: 400;
+    font-style: italic;
+    font-size: .925rem;
+    color: red;
+}

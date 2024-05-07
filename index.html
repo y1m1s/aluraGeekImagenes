@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>AluraGeek</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__content">
+            <img src="./img/corazones.svg" alt="">
+            <h3>AluraGeek</h3>
+        </div>
+    </header>
+    <!-- Main -->
+    <main class="main">
+        <section class="products">
+            <h2 class="products-title">Mis Productos:</h2>
+            <div class="products-container" data-products>
+                <!-- <div class="products-card">
+                    <img src="./img/img1.svg" alt="" class="products-card-img">
+                    <p>Producto 1</p>
+                    <div class="products-card-value">
+                        <span>$ 60.00</span>
+                        <img src="./img/delete.svg" alt="">
+                    </div>
+                </div> -->
+
+
+
+
+            </div>
+        </section>
+        <section class="info">
+            <h2 class="info-title">
+                Agregar
+                Producto:
+
+            </h2>
+            <form action=" " class="info-form" id="formulario" method="post" data-formulario>
+                <div class="caja"><input type="text" class="info-form-input" placeholder="nombre..." autocomplete="off"
+                        name="nombrePro" required minlength="3" pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+" data-nombre>
+                    <span class="advertencia"></span>
+                </div>
+                <div class="caja"><input type="number" class="info-form-input" placeholder="precio..."
+                        autocomplete="off" name="precioPro" minlength="1" required data-precio>
+                    <span class="advertencia"></span>
+                </div>
+                <div class="caja">
+                    <input type="text" class="info-form-input" placeholder="imagen..." autocomplete="off"
+                        name="imagenPro" required data-imagen>
+                    <span class="advertencia"></span>
+                </div>
+                <div class="info-form-action">
+                    <button class="info-form-btn btn1" type="submit">Enviar</button>
+                    <button class="info-form-btn btn2"  type="button" onclick="limpiarFormulario()">Limpiar</button>
+                </div>
+            </form>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-info">
+            <img src="./img/corazones.svg" alt="">
+            <h3>AluraGeek</h3>
+        </div>
+        <p class="footer-p1 font">Desarrollado por Yimi Solorzano</p>
+        <p class="footer-p2 font">ALURA LATAM - 2024</p>
+    </footer>
+    <script type="module" src="js/mostrarProductos.js"></script>
+    <script type="module" src="js/crearProducto.js"></script>
+    <script type="module" src="js/validandoCampos.js"></script>
+    <script src="./js/limpiarCampos.js"></script>
+
+</body>
+
+</html>
